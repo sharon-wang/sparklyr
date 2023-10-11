@@ -220,7 +220,7 @@ spark_ide_actions <- function(scon) {
     )
   }
 
-  if (spark_connection_is_yarn(scon)) {
+  if (isTRUE(spark_connection_is_yarn(scon))) {
     actions <- c(
       actions,
       list(
